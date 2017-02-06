@@ -1,0 +1,38 @@
+
+<div *ngIf="vehicle">
+	<h2>{{vehicle.name}}</h2>
+	<table>
+		<tr>
+			<td><label>ID: </label></td>
+			<td>{{vehicle.id}}</td>
+		</tr>
+		<tr>
+			<td><label>Name: </label></td>
+			<td><input [(ngModel)]="vehicle.name" placeholder="name" /></td>
+		</tr>
+		<tr>
+			<td><label>Email: </label></td>
+			<td><input [(ngModel)]="vehicle.email" placeholder="type" /></td>
+		</tr>
+		<tr>
+			<td><label>BirthDay: </label></td>
+			<td><input [(ngModel)]="vehicle.bday" placeholder="mass" /></td>
+		</tr>
+		<tr>
+			<td><label>Phone Number: </label></td>
+			<td><input [(ngModel)]="vehicle.phn" placeholder="mass" /></td>
+		</tr>
+		<tr>
+			<td><label>Address: </label></td>
+			<td><input [(ngModel)]="vehicle.add" placeholder="mass" /></td>
+		</tr>
+		<tr>
+			<td><label>City: </label></td>
+			<td><input [(ngModel)]="vehicle.city" placeholder="mass" /></td>
+		</tr>
+		<tr>
+			<td><label>country: </label></td>
+			<td><input [(ngModel)]="vehicle.country" placeholder="mass" /></td>
+		</tr>
+	</table>
+</div>

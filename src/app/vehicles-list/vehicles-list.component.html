@@ -1,0 +1,21 @@
+<input name="search" #searchName>
+<button (click)="performSearch(searchName)">Search</button>
+<p></p>
+<div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div style="width: 400px; display: table-cell;">
+        	<table class="tftable">
+  				<tr><th>ID</th><th>Name <a (click)="sortNameA()" href="#">&#8593;</a> <a (click)="sortNameD()" href="#">&darr;</a></th>
+  				<th>Email <a (click)="sortEmailA()" href="#">&#8593;</a> <a (click)="sortEmailD()" href="#">&darr;</a></th>
+  				<tr *ngFor="let vehicle of vehicles"
+  				[class.selected]="vehicle === selectedVehicle"
+  				(click)="onSelect(vehicle)">
+    			<td>{{vehicle.id}}</td> <td>{{vehicle.name}}</td> <td>{{vehicle.email}}</td>
+  			</tr>
+		</table>
+        </div>
+        <div style="display: table-cell;">
+      		<app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details>  	
+        </div>
+    </div>
+</div>
